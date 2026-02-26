@@ -178,8 +178,8 @@ export default function App() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
         * { box-sizing: border-box; }
-        input::placeholder { color: #4a5568; }
-        textarea::placeholder { color: #4a5568; }
+        input::placeholder { color: #ffffff; }
+        textarea::placeholder { color: #ffffff; }
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #1a1f2e; }
         ::-webkit-scrollbar-thumb { background: #2d3748; border-radius: 3px; }
@@ -197,7 +197,7 @@ export default function App() {
         <div style={{ width: "36px", height: "36px", background: "linear-gradient(135deg, #008B8B, #00A3A3)", borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px" }}>⊕</div>
         <div>
           <div style={{ fontWeight: 600, fontSize: "16px", letterSpacing: "-0.3px" }}>ReconcilMatch</div>
-          <div style={{ fontSize: "12px", color: "#4a5568", marginTop: "1px" }}>Rapprochement de montants · Factures & Avoirs</div>
+          <div style={{ fontSize: "12px", color: "#ffffff", marginTop: "1px" }}>Rapprochement de montants · Factures & Avoirs</div>
         </div>
       </div>
 
@@ -217,10 +217,10 @@ export default function App() {
                 placeholder="ex: 1 234,56"
                 style={{ flex: 1, background: "#0f1117", border: "1px solid #2d3748", borderRadius: "8px", padding: "10px 14px", color: "#e2e8f0", fontSize: "20px", fontFamily: "'IBM Plex Mono', monospace", fontWeight: 500 }}
               />
-              <span style={{ color: "#4a5568", fontSize: "16px" }}>€</span>
+              <span style={{ color: "#ffffff", fontSize: "16px" }}>€</span>
             </div>
             <div style={{ marginTop: "12px" }}>
-              <div style={{ fontSize: "11px", color: "#4a5568", marginBottom: "6px" }}>Nombre de lignes max (optionnel)</div>
+              <div style={{ fontSize: "11px", color: "#ffffff", marginBottom: "6px" }}>Nombre de lignes max (optionnel)</div>
               <input
                 value={maxLines}
                 onChange={(e) => setMaxLines(e.target.value)}
@@ -301,7 +301,7 @@ export default function App() {
                         </div>
                       </div>
                     )}
-                    <div style={{ marginTop: "14px", paddingTop: "12px", borderTop: "1px solid #1e2433", fontSize: "12px", color: "#4a5568", display: "flex", justifyContent: "space-between" }}>
+                    <div style={{ marginTop: "14px", paddingTop: "12px", borderTop: "1px solid #1e2433", fontSize: "12px", color: "#ffffff", display: "flex", justifyContent: "space-between" }}>
                       <span>Total saisi</span>
                       <span style={{ fontFamily: "'IBM Plex Mono', monospace", color: "#94a3b8" }}>
                         {fmt(amounts.reduce((s, a) => s + a.value, 0))} €
@@ -372,7 +372,7 @@ export default function App() {
                     className={`combo-row${isActive ? " active" : ""}`}
                     style={{ background: isActive ? "rgba(99,102,241,0.12)" : "rgba(255,255,255,0.02)", border: `1px solid ${isActive ? "rgba(99,102,241,0.4)" : "#1e2433"}`, borderRadius: "8px", padding: "12px" }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
-                      <span style={{ fontSize: "11px", color: "#4a5568", fontFamily: "'IBM Plex Mono', monospace" }}>
+                      <span style={{ fontSize: "11px", color: "#ffffff", fontFamily: "'IBM Plex Mono', monospace" }}>
                         #{idx + 1} · {combo.length} ligne{combo.length > 1 ? "s" : ""}
                       </span>
                       <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "13px", fontWeight: 600, color: "#008B8B" }}>
