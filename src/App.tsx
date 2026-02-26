@@ -250,7 +250,7 @@ export default function App() {
 
             {pasteMode ? (
               <div>
-                <div style={{ fontSize: "12px", color: "#64748b", marginBottom: "8px" }}>Copiez une colonne depuis Excel et collez-la ici (une valeur par ligne)</div>
+                <div style={{ fontSize: "12px", color: "#ffffff", marginBottom: "8px" }}>Copiez une colonne depuis Excel et collez-la ici (une valeur par ligne)</div>
                 <textarea
                   value={pasteText}
                   onChange={(e) => setPasteText(e.target.value)}
