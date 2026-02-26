@@ -187,14 +187,14 @@ export default function App() {
         .combo-row:hover { background: rgba(99,102,241,0.06) !important; }
         .combo-row.active { background: rgba(99,102,241,0.12) !important; border-color: rgba(99,102,241,0.4) !important; }
         .add-btn:hover { background: #008B8B !important; }
-        .search-btn:hover { background: #4f46e5 !important; }
+        .search-btn:hover { background: #007070 !important; }
         .paste-btn:hover { opacity: 0.85; }
         input:focus, textarea:focus { outline: none; border-color: #008B8B !important; }
       `}</style>
 
       {/* Header */}
       <div style={{ borderBottom: "1px solid #1e2433", padding: "20px 40px", display: "flex", alignItems: "center", gap: "16px", background: "#0d1018" }}>
-        <div style={{ width: "36px", height: "36px", background: "linear-gradient(135deg, #008B8B, #8b5cf6)", borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px" }}>⊕</div>
+        <div style={{ width: "36px", height: "36px", background: "linear-gradient(135deg, #008B8B, #00A3A3)", borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px" }}>⊕</div>
         <div>
           <div style={{ fontWeight: 600, fontSize: "16px", letterSpacing: "-0.3px" }}>ReconcilMatch</div>
           <div style={{ fontSize: "12px", color: "#4a5568", marginTop: "1px" }}>Rapprochement de montants · Factures & Avoirs</div>
@@ -236,7 +236,7 @@ export default function App() {
               <div style={{ fontSize: "11px", letterSpacing: "0.08em", color: "#008B8B", fontWeight: 600, textTransform: "uppercase" }}>Montants ({amounts.length})</div>
               <div style={{ display: "flex", gap: "8px" }}>
                 <button onClick={() => { setPasteMode(!pasteMode); setError(""); }} className="paste-btn"
-                  style={{ background: "rgba(99,102,241,0.1)", border: "1px solid rgba(99,102,241,0.3)", borderRadius: "6px", color: "#818cf8", fontSize: "11px", padding: "4px 10px", cursor: "pointer", fontFamily: "'DM Sans', sans-serif" }}>
+                  style={{ background: "rgba(99,102,241,0.1)", border: "1px solid rgba(99,102,241,0.3)", borderRadius: "6px", color: "#00BFB", fontSize: "11px", padding: "4px 10px", cursor: "pointer", fontFamily: "'DM Sans', sans-serif" }}>
                   {pasteMode ? "✕ Annuler" : "⧉ Coller depuis Excel"}
                 </button>
                 {amounts.length > 0 && (
@@ -274,7 +274,7 @@ export default function App() {
                     style={{ flex: 1, background: "#0f1117", border: "1px solid #2d3748", borderRadius: "8px", padding: "9px 13px", color: "#e2e8f0", fontSize: "14px", fontFamily: "'IBM Plex Mono', monospace" }}
                   />
                   <button onClick={handleAddBtn} className="add-btn"
-                    style={{ background: "#4f46e5", border: "none", borderRadius: "8px", color: "white", fontWeight: 600, fontSize: "18px", width: "40px", cursor: "pointer", transition: "background 0.15s" }}>
+                    style={{ background: "#007070", border: "none", borderRadius: "8px", color: "white", fontWeight: 600, fontSize: "18px", width: "40px", cursor: "pointer", transition: "background 0.15s" }}>
                     +
                   </button>
                 </div>
@@ -320,7 +320,7 @@ export default function App() {
           )}
 
           <button onClick={handleSearch} disabled={running} className="search-btn"
-            style={{ background: running ? "#2d3748" : "linear-gradient(135deg, #008B8B, #8b5cf6)", border: "none", borderRadius: "10px", color: running ? "#64748b" : "white", fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: "15px", padding: "14px", cursor: running ? "not-allowed" : "pointer", transition: "all 0.2s", letterSpacing: "-0.2px" }}>
+            style={{ background: running ? "#2d3748" : "linear-gradient(135deg, #008B8B, #00A3A3)", border: "none", borderRadius: "10px", color: running ? "#64748b" : "white", fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: "15px", padding: "14px", cursor: running ? "not-allowed" : "pointer", transition: "all 0.2s", letterSpacing: "-0.2px" }}>
             {running ? "⟳ Recherche en cours…" : "Rechercher les combinaisons"}
           </button>
         </div>
