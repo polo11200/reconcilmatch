@@ -178,14 +178,14 @@ export default function App() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
         * { box-sizing: border-box; }
-        input::placeholder { color: #ffffff; }
+        input::placeholder { color: #4a5568; }
         textarea::placeholder { color: #4a5568; }
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #1a1f2e; }
         ::-webkit-scrollbar-thumb { background: #2d3748; border-radius: 3px; }
         .combo-row { transition: background 0.15s; cursor: pointer; }
-        .combo-row:hover { background: rgba(99,102,241,0.06) !important; }
-        .combo-row.active { background: rgba(99,102,241,0.12) !important; border-color: rgba(99,102,241,0.4) !important; }
+        .combo-row:hover { background: rgba(0,139,139,0.06) !important; }
+        .combo-row.active { background: rgba(0,139,139,0.12) !important; border-color: rgba(0,139,139,0.4) !important; }
         .add-btn:hover { background: #008B8B !important; }
         .search-btn:hover { background: #007070 !important; }
         .paste-btn:hover { opacity: 0.85; }
@@ -236,7 +236,7 @@ export default function App() {
               <div style={{ fontSize: "11px", letterSpacing: "0.08em", color: "#008B8B", fontWeight: 600, textTransform: "uppercase" }}>Montants ({amounts.length})</div>
               <div style={{ display: "flex", gap: "8px" }}>
                 <button onClick={() => { setPasteMode(!pasteMode); setError(""); }} className="paste-btn"
-                  style={{ background: "rgba(99,102,241,0.1)", border: "1px solid rgba(99,102,241,0.3)", borderRadius: "6px", color: "#00BFB", fontSize: "11px", padding: "4px 10px", cursor: "pointer", fontFamily: "'DM Sans', sans-serif" }}>
+                  style={{ background: "rgba(0,139,139,0.1)", border: "1px solid rgba(0,139,139,0.3)", borderRadius: "6px", color: "#ffffff", fontSize: "11px", padding: "4px 10px", cursor: "pointer", fontFamily: "'DM Sans', sans-serif" }}>
                   {pasteMode ? "✕ Annuler" : "⧉ Coller depuis Excel"}
                 </button>
                 {amounts.length > 0 && (
@@ -370,7 +370,7 @@ export default function App() {
                 return (
                   <div key={idx} onClick={() => setHighlightedCombo(isActive ? null : idx)}
                     className={`combo-row${isActive ? " active" : ""}`}
-                    style={{ background: isActive ? "rgba(99,102,241,0.12)" : "rgba(255,255,255,0.02)", border: `1px solid ${isActive ? "rgba(99,102,241,0.4)" : "#1e2433"}`, borderRadius: "8px", padding: "12px" }}>
+                    style={{ background: isActive ? "rgba(0,139,139,0.12)" : "rgba(255,255,255,0.02)", border: `1px solid ${isActive ? "rgba(0,139,139,0.4)" : "#1e2433"}`, borderRadius: "8px", padding: "12px" }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
                       <span style={{ fontSize: "11px", color: "#4a5568", fontFamily: "'IBM Plex Mono', monospace" }}>
                         #{idx + 1} · {combo.length} ligne{combo.length > 1 ? "s" : ""}
