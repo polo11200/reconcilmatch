@@ -186,15 +186,15 @@ export default function App() {
         .combo-row { transition: background 0.15s; cursor: pointer; }
         .combo-row:hover { background: rgba(99,102,241,0.06) !important; }
         .combo-row.active { background: rgba(99,102,241,0.12) !important; border-color: rgba(99,102,241,0.4) !important; }
-        .add-btn:hover { background: #2563eb !important; }
+        .add-btn:hover { background: #008B8B !important; }
         .search-btn:hover { background: #4f46e5 !important; }
         .paste-btn:hover { opacity: 0.85; }
-        input:focus, textarea:focus { outline: none; border-color: #2563eb !important; }
+        input:focus, textarea:focus { outline: none; border-color: #008B8B !important; }
       `}</style>
 
       {/* Header */}
       <div style={{ borderBottom: "1px solid #1e2433", padding: "20px 40px", display: "flex", alignItems: "center", gap: "16px", background: "#0d1018" }}>
-        <div style={{ width: "36px", height: "36px", background: "linear-gradient(135deg, #2563eb, #8b5cf6)", borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px" }}>⊕</div>
+        <div style={{ width: "36px", height: "36px", background: "linear-gradient(135deg, #008B8B, #8b5cf6)", borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px" }}>⊕</div>
         <div>
           <div style={{ fontWeight: 600, fontSize: "16px", letterSpacing: "-0.3px" }}>ReconcilMatch</div>
           <div style={{ fontSize: "12px", color: "#4a5568", marginTop: "1px" }}>Rapprochement de montants · Factures & Avoirs</div>
@@ -208,7 +208,7 @@ export default function App() {
 
           {/* Target */}
           <div style={{ background: "#13161f", border: "1px solid #1e2433", borderRadius: "12px", padding: "20px" }}>
-            <div style={{ fontSize: "11px", letterSpacing: "0.08em", color: "#2563eb", fontWeight: 600, marginBottom: "12px", textTransform: "uppercase" }}>Montant Cible</div>
+            <div style={{ fontSize: "11px", letterSpacing: "0.08em", color: "#008B8B", fontWeight: 600, marginBottom: "12px", textTransform: "uppercase" }}>Montant Cible</div>
             <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
               <input
                 value={targetInput}
@@ -233,7 +233,7 @@ export default function App() {
           {/* Amounts input */}
           <div style={{ background: "#13161f", border: "1px solid #1e2433", borderRadius: "12px", padding: "20px" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "12px" }}>
-              <div style={{ fontSize: "11px", letterSpacing: "0.08em", color: "#2563eb", fontWeight: 600, textTransform: "uppercase" }}>Montants ({amounts.length})</div>
+              <div style={{ fontSize: "11px", letterSpacing: "0.08em", color: "#008B8B", fontWeight: 600, textTransform: "uppercase" }}>Montants ({amounts.length})</div>
               <div style={{ display: "flex", gap: "8px" }}>
                 <button onClick={() => { setPasteMode(!pasteMode); setError(""); }} className="paste-btn"
                   style={{ background: "rgba(99,102,241,0.1)", border: "1px solid rgba(99,102,241,0.3)", borderRadius: "6px", color: "#818cf8", fontSize: "11px", padding: "4px 10px", cursor: "pointer", fontFamily: "'DM Sans', sans-serif" }}>
@@ -259,7 +259,7 @@ export default function App() {
                   style={{ width: "100%", background: "#0f1117", border: "1px solid #2d3748", borderRadius: "8px", padding: "10px 12px", color: "#e2e8f0", fontSize: "13px", fontFamily: "'IBM Plex Mono', monospace", resize: "vertical" }}
                 />
                 <button onClick={handlePasteImport}
-                  style={{ marginTop: "10px", background: "#2563eb", border: "none", borderRadius: "8px", color: "white", fontFamily: "'DM Sans', sans-serif", fontWeight: 500, fontSize: "13px", padding: "8px 16px", cursor: "pointer", width: "100%" }}>
+                  style={{ marginTop: "10px", background: "#008B8B", border: "none", borderRadius: "8px", color: "white", fontFamily: "'DM Sans', sans-serif", fontWeight: 500, fontSize: "13px", padding: "8px 16px", cursor: "pointer", width: "100%" }}>
                   Importer les montants
                 </button>
               </div>
@@ -320,14 +320,14 @@ export default function App() {
           )}
 
           <button onClick={handleSearch} disabled={running} className="search-btn"
-            style={{ background: running ? "#2d3748" : "linear-gradient(135deg, #2563eb, #8b5cf6)", border: "none", borderRadius: "10px", color: running ? "#64748b" : "white", fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: "15px", padding: "14px", cursor: running ? "not-allowed" : "pointer", transition: "all 0.2s", letterSpacing: "-0.2px" }}>
+            style={{ background: running ? "#2d3748" : "linear-gradient(135deg, #008B8B, #8b5cf6)", border: "none", borderRadius: "10px", color: running ? "#64748b" : "white", fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: "15px", padding: "14px", cursor: running ? "not-allowed" : "pointer", transition: "all 0.2s", letterSpacing: "-0.2px" }}>
             {running ? "⟳ Recherche en cours…" : "Rechercher les combinaisons"}
           </button>
         </div>
 
         {/* RIGHT PANEL */}
         <div style={{ background: "#13161f", border: "1px solid #1e2433", borderRadius: "12px", padding: "20px", minHeight: "400px" }}>
-          <div style={{ fontSize: "11px", letterSpacing: "0.08em", color: "#2563eb", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <div style={{ fontSize: "11px", letterSpacing: "0.08em", color: "#008B8B", fontWeight: 600, textTransform: "uppercase", marginBottom: "16px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <span>Résultats</span>
             {results !== null && (
               <span style={{
@@ -350,8 +350,8 @@ export default function App() {
           )}
 
           {running && (
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "300px", color: "#2563eb", fontSize: "13px", gap: "10px" }}>
-              <div style={{ width: "18px", height: "18px", border: "2px solid #2563eb", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.7s linear infinite" }} />
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "300px", color: "#008B8B", fontSize: "13px", gap: "10px" }}>
+              <div style={{ width: "18px", height: "18px", border: "2px solid #008B8B", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.7s linear infinite" }} />
               <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
               Calcul en cours…
             </div>
@@ -375,7 +375,7 @@ export default function App() {
                       <span style={{ fontSize: "11px", color: "#4a5568", fontFamily: "'IBM Plex Mono', monospace" }}>
                         #{idx + 1} · {combo.length} ligne{combo.length > 1 ? "s" : ""}
                       </span>
-                      <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "13px", fontWeight: 600, color: "#2563eb" }}>
+                      <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "13px", fontWeight: 600, color: "#008B8B" }}>
                         = {fmt(target)} €
                       </span>
                     </div>
