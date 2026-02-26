@@ -186,7 +186,7 @@ export default function App() {
         .combo-row { transition: background 0.15s; cursor: pointer; }
         .combo-row:hover { background: rgba(99,102,241,0.06) !important; }
         .combo-row.active { background: rgba(99,102,241,0.12) !important; border-color: rgba(99,102,241,0.4) !important; }
-        .add-btn:hover { background: #6366f1 !important; }
+        .add-btn:hover { background: #2563eb !important; }
         .search-btn:hover { background: #4f46e5 !important; }
         .paste-btn:hover { opacity: 0.85; }
         input:focus, textarea:focus { outline: none; border-color: #6366f1 !important; }
