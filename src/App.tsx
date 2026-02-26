@@ -178,7 +178,7 @@ export default function App() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
         * { box-sizing: border-box; }
-        input::placeholder { color: #4a5568; }
+        input::placeholder { color: #ffffff; }
         textarea::placeholder { color: #4a5568; }
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #1a1f2e; }
@@ -280,7 +280,7 @@ export default function App() {
                 </div>
 
                 {amounts.length === 0 ? (
-                  <div style={{ textAlign: "center", padding: "24px", color: "#2d3748", fontSize: "13px", border: "1px dashed #1e2433", borderRadius: "8px" }}>
+                  <div style={{ textAlign: "center", padding: "24px", color: "#ffffff", fontSize: "13px", border: "1px dashed #1e2433", borderRadius: "8px" }}>
                     Aucun montant saisi
                   </div>
                 ) : (
@@ -343,7 +343,7 @@ export default function App() {
           </div>
 
           {results === null && !running && (
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "300px", color: "#2d3748", gap: "12px" }}>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "300px", color: "#ffffff", gap: "12px" }}>
               <div style={{ fontSize: "36px", opacity: 0.3 }}>⊕</div>
               <div style={{ fontSize: "13px" }}>Saisissez vos montants et lancez la recherche</div>
             </div>
